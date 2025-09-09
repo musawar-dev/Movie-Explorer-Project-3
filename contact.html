@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Movie Explorer — Contact</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header class="site-header">
+        <div class="container header-inner">
+            <a class="logo" href="index.html">🎬 Movie Explorer</a>
+            <nav class="nav">
+                <a class="nav-link" href="index.html">Home</a>
+                <a class="nav-link" href="favourites.html">Favourites</a>
+                <a class="nav-link" href="faq.html">FAQ</a>
+                <a class="nav-link" href="about.html">About</a>
+                <a class="nav-link active" href="contact.html">Contact</a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container main-content">
+        <h2 class="section-title">Contact Us</h2>
+        <form id="contactForm" class="contact-form" novalidate>
+            <input type="text" id="contactName" name="name" placeholder="Your name" required />
+            <input type="email" id="contactEmail" name="email" placeholder="Your email" required />
+            <textarea id="contactMessage" name="message" rows="6" placeholder="Your message" required></textarea>
+            <div class="center-row">
+                <button type="submit" class="btn btn-primary">Send Message</button>
+            </div>
+            <p id="contactStatus" class="message"></p>
+        </form>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container footer-inner">
+            <div class="footer-col">
+                <strong>Quick Links</strong>
+                <nav>
+                    <a href="index.html">Home</a> ·
+                    <a href="favourites.html">Favourites</a>
+                </nav>
+            </div>
+            <div class="footer-col">
+                <strong>Follow</strong>
+                <div class="social">
+                    <a href="https://facebook.com" target="_blank" rel="noopener">Facebook</a>
+                </div>
+            </div>
+        </div>
+        <div class="container" style="text-align:center;margin-top:12px;color:#aab;">
+            © 2025 Movie Explorer — demo
+        </div>
+    </footer>
+
+    <script defer src="script.js"></script>
+</body>
+
+</html>

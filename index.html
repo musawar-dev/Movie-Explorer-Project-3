@@ -1,0 +1,92 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Movie Explorer — Home</title>
+    <meta name="description"
+        content="Movie Explorer — search trending movies, save favorites. Fast, responsive, and simple." />
+    <link rel="stylesheet" href="style.css">
+    <!-- Preconnect for speed -->
+    <link rel="preconnect" href="https://www.omdbapi.com/">
+</head>
+
+<body>
+    <!-- Header / Navbar -->
+    <header class="site-header">
+        <div class="container header-inner">
+            <a class="logo" href="index.html" aria-label="Movie Explorer home">🎬 Movie Explorer</a>
+            <nav class="nav" aria-label="Main navigation">
+                <a class="nav-link active" href="index.html">Home</a>
+                <a class="nav-link" href="favourites.html">Favourites</a>
+                <a class="nav-link" href="about.html">About</a>
+                <a class="nav-link" href="faq.html">FAQ</a>
+                <a class="nav-link" href="contact.html">Contact</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero -->
+    <section class="hero">
+        <div class="container">
+            <h1>Discover Movies Fast</h1>
+            <p class="lead">Search for any movie, see details, and save favourites — frontend-only demo optimized for
+                speed.</p>
+
+            <form id="searchForm" class="search-form" aria-label="Search movies">
+                <input id="searchInput" name="q" type="search" placeholder="Search movies (e.g. Inception)"
+                    aria-label="Search movies" autocomplete="off" />
+                <button id="searchBtn" type="submit">Search</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Main content -->
+    <main class="container main-content">
+        <h2 class="section-title">Movies</h2>
+
+        <div id="moviesGrid" class="movies-grid" aria-live="polite">
+            <!-- Movie cards injected here -->
+        </div>
+
+        <div class="center-row">
+            <button id="loadMoreBtn" class="btn btn-primary load-more">Load More Movies</button>
+        </div>
+
+        <p id="message" class="message" role="status" aria-live="polite"></p>
+    </main>
+
+    <!-- Footer -->
+    <footer class="site-footer">
+        <div class="container footer-inner">
+            <div class="footer-col">
+                <strong>Quick Links</strong>
+                <nav>
+                    <a href="index.html">Home</a> ·
+                    <a href="favourites.html">Favourites</a> ·
+                    <a href="about.html">About</a> ·
+                    <a href="faq.html">FAQ</a> ·
+                    <a href="contact.html">Contact</a>
+                </nav>
+            </div>
+
+            <div class="footer-col">
+                <strong>Follow</strong>
+                <div class="social">
+                    <a href="https://facebook.com" target="_blank" rel="noopener">Facebook</a>
+                    <a href="https://twitter.com" target="_blank" rel="noopener">Twitter</a>
+                    <a href="https://instagram.com" target="_blank" rel="noopener">Instagram</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="container" style="text-align:center;margin-top:12px;color:#aab;">
+            © 2025 Movie Explorer — demo • data from OMDb
+        </div>
+    </footer>
+
+    <script defer src="script.js"></script>
+</body>
+
+</html>

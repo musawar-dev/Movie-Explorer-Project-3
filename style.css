@@ -1,0 +1,387 @@
+/* =========================
+   style.css — Movie Explorer
+   Modern UX, hover effects, responsive, speed-minded
+   ========================= */
+
+/* Reset & base */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0
+}
+
+html,
+body {
+    height: 100%
+}
+
+body {
+    font-family: "Inter", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+    background: linear-gradient(180deg, #0f1724 0%, #07122b 100%);
+    color: #e6eef6;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    line-height: 1.45;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Layout container */
+.container {
+    width: 92%;
+    max-width: 1200px;
+    margin: 0 auto
+}
+
+/* Header */
+.site-header {
+    background: linear-gradient(90deg, #5b21b6 0%, #0ea5e9 100%);
+    box-shadow: 0 6px 18px rgba(2, 6, 23, 0.5);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.header-inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 14px 0;
+}
+
+.logo {
+    font-weight: 700;
+    font-size: 1.25rem;
+    color: #fff;
+    text-decoration: none
+}
+
+.logo a {
+    color: inherit;
+    text-decoration: none
+}
+
+.nav {
+    display: flex;
+    gap: 12px
+}
+
+/* Remove underline from all links */
+a {
+    text-decoration: none;
+    color: inherit;
+    /* optional: keeps link color same as parent */
+}
+
+/* Optional: add hover effect */
+a:hover {
+    text-decoration: none;
+    color: #ff7e5f;
+    /* change color on hover */
+}
+
+
+.nav-link {
+    color: rgba(255, 255, 255, 0.95);
+    padding: 8px 12px;
+    border-radius: 8px;
+    font-weight: 600;
+    transition: transform .18s ease, background .18s ease;
+}
+
+.nav-link:hover {
+    transform: translateY(-2px);
+    background: rgba(255, 255, 255, 0.08)
+}
+
+.nav-link.active {
+    background: rgba(0, 0, 0, 0.12);
+    box-shadow: inset 0 -3px 0 rgba(255, 255, 255, 0.06)
+}
+
+/* Hero */
+.hero {
+    padding: 48px 0;
+    text-align: center
+}
+
+.hero h1 {
+    font-size: 2.2rem;
+    margin-bottom: 8px
+}
+
+.lead {
+    color: rgba(230, 238, 246, 0.85);
+    margin-bottom: 18px
+}
+
+/* Search form */
+.search-form {
+    display: flex;
+    justify-content: center;
+    gap: 0;
+    max-width: 900px;
+    margin: 0 auto
+}
+
+#searchInput {
+    width: 70%;
+    min-width: 180px;
+    padding: 12px 14px;
+    border-radius: 10px 0 0 10px;
+    border: 1px solid rgba(255, 255, 255, 0.06);
+    background: rgba(255, 255, 255, 0.03);
+    color: inherit;
+    font-size: 1rem;
+    outline: none;
+}
+
+#searchInput::placeholder {
+    color: rgba(255, 255, 255, 0.6)
+}
+
+#searchBtn {
+    background: linear-gradient(90deg, #f97316, #fb7185);
+    border: 0;
+    color: #fff;
+    padding: 12px 18px;
+    border-radius: 0 10px 10px 0;
+    cursor: pointer;
+    font-weight: 700;
+    transition: transform .15s ease, box-shadow .15s ease;
+}
+
+#searchBtn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 24px rgba(251, 113, 133, 0.18)
+}
+
+/* Main content */
+.main-content {
+    padding: 28px 0
+}
+
+.section-title {
+    font-size: 1.25rem;
+    margin-bottom: 12px;
+    color: #e6eef6
+}
+
+/* Grid */
+.movies-grid {
+    display: grid;
+    gap: 18px;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr))
+}
+
+/* Card */
+.movie-card {
+    background: linear-gradient(180deg, rgba(255, 255, 255, 0.03), rgba(255, 255, 255, 0.02));
+    border-radius: 12px;
+    padding: 10px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    transition: transform .22s cubic-bezier(.2, .9, .3, 1), box-shadow .22s ease;
+    will-change: transform;
+    border: 1px solid rgba(255, 255, 255, 0.03);
+}
+
+.movie-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 20px 40px rgba(2, 6, 23, 0.6)
+}
+
+.movie-card img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 8px
+}
+
+.movie-card h3 {
+    font-size: 1rem;
+    margin: 12px 0;
+    text-align: center;
+    color: #ffd580
+}
+
+.movie-card .meta {
+    color: rgba(230, 238, 246, 0.8);
+    font-size: 0.9rem;
+    text-align: center
+}
+
+/* Card actions */
+.card-actions {
+    display: flex;
+    gap: 10px;
+    justify-content: space-between;
+    margin-top: 12px
+}
+
+.btn {
+    padding: 8px 12px;
+    border-radius: 8px;
+    border: 0;
+    cursor: pointer;
+    font-weight: 700
+}
+
+.btn-primary {
+    background: linear-gradient(90deg, #06b6d4, #3b82f6);
+    color: #042235;
+    box-shadow: 0 8px 20px rgba(59, 130, 246, 0.12)
+}
+
+.btn-primary:hover {
+    transform: translateY(-3px)
+}
+
+.btn-fav {
+    background: linear-gradient(90deg, #fb7185, #fb923c);
+    color: #fff
+}
+
+.btn-fav:hover {
+    transform: translateY(-3px)
+}
+
+/* Load more */
+.center-row {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px
+}
+
+.load-more {
+    padding: 12px 20px;
+    border-radius: 10px;
+    border: 0;
+    background: linear-gradient(90deg, #7c3aed, #4f46e5);
+    color: #fff;
+    cursor: pointer;
+    font-weight: 700
+}
+
+.load-more:hover {
+    transform: translateY(-3px)
+}
+
+/* Messages */
+.message {
+    margin-top: 18px;
+    color: rgba(255, 255, 255, 0.75);
+    text-align: center
+}
+
+/* Movie details (page) */
+.movie-details {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    align-items: start;
+    padding: 10px
+}
+
+.movie-details img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px
+}
+
+.movie-details .details {
+    color: rgba(230, 238, 246, 0.95)
+}
+
+.movie-details h2 {
+    margin-bottom: 8px;
+    color: #ffd580
+}
+
+/* Forms */
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    max-width: 700px
+}
+
+.contact-form input,
+.contact-form textarea {
+    padding: 12px;
+    border-radius: 8px;
+    border: 1px solid rgba(255, 255, 255, 0.06);
+    background: rgba(255, 255, 255, 0.02);
+    color: inherit
+}
+
+.contact-form button {
+    align-self: start
+}
+
+/* Footer */
+.site-footer {
+    background: linear-gradient(90deg, #07122b, #001021);
+    padding: 26px 0;
+    margin-top: auto;
+    border-top: 1px solid rgba(255, 255, 255, 0.03)
+}
+
+.footer-inner {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    flex-wrap: wrap
+}
+
+.footer-col {
+    min-width: 180px
+}
+
+.footer-col strong {
+    display: block;
+    margin-bottom: 8px;
+    color: #9dd3ff
+}
+
+.footer-col nav a {
+    color: rgba(255, 255, 255, 0.7);
+    margin-right: 8px
+}
+
+.footer-col .social a {
+    margin-right: 10px;
+    color: rgba(255, 255, 255, 0.8)
+}
+
+.footer-col a:hover {
+    color: #fff
+}
+
+/* Small screens */
+@media (max-width:880px) {
+    .movie-details {
+        grid-template-columns: 1fr
+    }
+
+    .search-form {
+        flex-direction: column;
+        gap: 8px
+    }
+
+    #searchInput {
+        width: 100%
+    }
+
+    .header-inner {
+        flex-direction: column;
+        gap: 12px;
+        align-items: flex-start
+    }
+
+    .nav {
+        flex-wrap: wrap
+    }
+}

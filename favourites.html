@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Movie Explorer — Favourites</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header class="site-header">
+        <div class="container header-inner">
+            <a class="logo" href="index.html">🎬 Movie Explorer</a>
+            <nav class="nav">
+                <a class="nav-link" href="index.html">Home</a>
+                <a class="nav-link active" href="favourites.html">Favourites</a>
+                <a class="nav-link" href="about.html">About</a>
+                <a class="nav-link" href="faq.html">FAQ</a>
+                <a class="nav-link" href="contact.html">Contact</a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container main-content">
+        <h2 class="section-title">Your Favourites</h2>
+        <div id="favouritesGrid" class="movies-grid" aria-live="polite"></div>
+        <p id="noFavMsg" class="message">You have not added any favourites yet.</p>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container footer-inner">
+            <div class="footer-col">
+                <strong>Quick Links</strong>
+                <nav>
+                    <a href="index.html">Home</a> ·
+                    <a href="favourites.html">Favourites</a> ·
+                    <a href="about.html">About</a>
+                </nav>
+            </div>
+            <div class="footer-col">
+                <strong>Follow</strong>
+                <div class="social">
+                    <a href="https://facebook.com" target="_blank" rel="noopener">Facebook</a>
+                    <a href="https://twitter.com" target="_blank" rel="noopener">Twitter</a>
+                </div>
+            </div>
+        </div>
+        <div class="container" style="text-align:center;margin-top:12px;color:#aab;">
+            © 2025 Movie Explorer — demo
+        </div>
+    </footer>
+
+    <script defer src="script.js"></script>
+</body>
+
+</html>
